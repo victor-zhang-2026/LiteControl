@@ -1,0 +1,63 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* LiteControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000002 /* LiteControlApp.swift */; };
+		C10000000000000000000001 /* ProductCatalog.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001; };
+		C10000000000000000000002 /* PostWindow.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002; };
+		C10000000000000000000003 /* AppController.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003; };
+		C10000000000000000000004 /* ProductIcons */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000002 /* LiteControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiteControlApp.swift; sourceTree = "<group>"; };
+		A10000000000000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000000000000000000004 /* LiteControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiteControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000001 /* ProductCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCatalog.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* PostWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWindow.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* ProductIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProductIcons; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000005 = {isa = PBXGroup; children = (A10000000000000000000006 /* Sources */, A10000000000000000000007 /* Support */, A10000000000000000000008 /* Products */); sourceTree = "<group>"; };
+		A10000000000000000000006 /* Sources */ = {isa = PBXGroup; children = (A10000000000000000000009 /* LiteControl */); path = Sources; sourceTree = "<group>"; };
+		A10000000000000000000009 /* LiteControl */ = {isa = PBXGroup; children = (A10000000000000000000002 /* LiteControlApp.swift */, B10000000000000000000001 /* ProductCatalog.swift */, B10000000000000000000002 /* PostWindow.swift */, B10000000000000000000003 /* AppController.swift */); path = LiteControl; sourceTree = "<group>"; };
+		A10000000000000000000007 /* Support */ = {isa = PBXGroup; children = (A10000000000000000000003 /* Info.plist */, B10000000000000000000004 /* ProductIcons */); path = Support; sourceTree = "<group>"; };
+		A10000000000000000000008 /* Products */ = {isa = PBXGroup; children = (A10000000000000000000004 /* LiteControl.app */); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1000000000000000000000A /* LiteControl */ = {isa = PBXNativeTarget; buildConfigurationList = A1000000000000000000000B /* Build configuration list for PBXNativeTarget "LiteControl" */; buildPhases = (A1000000000000000000000C /* Sources */, D10000000000000000000001 /* Resources */); buildRules = (); dependencies = (); name = LiteControl; productName = LiteControl; productReference = A10000000000000000000004 /* LiteControl.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1000000000000000000000D /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {A1000000000000000000000A = {CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = A1000000000000000000000E /* Build configuration list for PBXProject "LiteControl" */; compatibilityVersion = "Xcode 14.0"; developmentRegion = zh_CN; hasScannedForEncodings = 0; knownRegions = (zh_CN, en, Base); mainGroup = A10000000000000000000005; productRefGroup = A10000000000000000000008 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (A1000000000000000000000A /* LiteControl */); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D10000000000000000000001 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (C10000000000000000000004 /* ProductIcons */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1000000000000000000000C /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* LiteControlApp.swift in Sources */, C10000000000000000000001 /* ProductCatalog.swift */, C10000000000000000000002 /* PostWindow.swift */, C10000000000000000000003 /* AppController.swift */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000010 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A10000000000000000000011 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; }; name = Release; };
+		A10000000000000000000012 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CODE_SIGN_IDENTITY = "-"; ENABLE_HARDENED_RUNTIME = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Support/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = "io.github.victor-zhang-2026.litecontrol"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Debug; };
+		A10000000000000000000013 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CODE_SIGN_IDENTITY = "-"; ENABLE_HARDENED_RUNTIME = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Support/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = "io.github.victor-zhang-2026.litecontrol"; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1000000000000000000000B /* Build configuration list for PBXNativeTarget "LiteControl" */ = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000012 /* Debug */, A10000000000000000000013 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A1000000000000000000000E /* Build configuration list for PBXProject "LiteControl" */ = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000010 /* Debug */, A10000000000000000000011 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A1000000000000000000000D /* Project object */;
+}
