@@ -8,6 +8,8 @@
 	<string>LiteControl</string>
 	<key>CFBundleExecutable</key>
 	<string>LiteControl</string>
+	<key>CFBundleIconFile</key>
+	<string>LiteControl.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>io.github.victor-zhang-2026.litecontrol</string>
 	<key>CFBundleInfoDictionaryVersion</key>

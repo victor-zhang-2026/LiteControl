@@ -12,6 +12,7 @@
 		C10000000000000000000003 /* AppController.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003; };
 		C10000000000000000000004 /* ProductIcons */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004; };
 		F10000000000000000000004 = {isa = PBXBuildFile; fileRef = F10000000000000000000003; };
+		C10000000000000000000005 /* LiteControl.icns in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* LiteControl.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B10000000000000000000004 /* ProductIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ProductIcons; sourceTree = "<group>"; };
 		F10000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F10000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B10000000000000000000005 /* LiteControl.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = LiteControl.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXVariantGroup section */
@@ -34,7 +36,7 @@
 		A10000000000000000000005 = {isa = PBXGroup; children = (A10000000000000000000006 /* Sources */, A10000000000000000000007 /* Support */, A10000000000000000000008 /* Products */); sourceTree = "<group>"; };
 		A10000000000000000000006 /* Sources */ = {isa = PBXGroup; children = (A10000000000000000000009 /* LiteControl */); path = Sources; sourceTree = "<group>"; };
 		A10000000000000000000009 /* LiteControl */ = {isa = PBXGroup; children = (A10000000000000000000002 /* LiteControlApp.swift */, B10000000000000000000001 /* ProductCatalog.swift */, B10000000000000000000002 /* PostWindow.swift */, B10000000000000000000003 /* AppController.swift */); path = LiteControl; sourceTree = "<group>"; };
-		A10000000000000000000007 /* Support */ = {isa = PBXGroup; children = (A10000000000000000000003 /* Info.plist */, B10000000000000000000004 /* ProductIcons */, F10000000000000000000003 /* Localizable.strings */); path = Support; sourceTree = "<group>"; };
+		A10000000000000000000007 /* Support */ = {isa = PBXGroup; children = (A10000000000000000000003 /* Info.plist */, B10000000000000000000004 /* ProductIcons */, F10000000000000000000003 /* Localizable.strings */, B10000000000000000000005 /* LiteControl.icns */); path = Support; sourceTree = "<group>"; };
 		A10000000000000000000008 /* Products */ = {isa = PBXGroup; children = (A10000000000000000000004 /* LiteControl.app */); name = Products; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
@@ -47,7 +49,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D10000000000000000000001 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (C10000000000000000000004 /* ProductIcons */, F10000000000000000000004 /* Localizable.strings */); runOnlyForDeploymentPostprocessing = 0; };
+		D10000000000000000000001 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (C10000000000000000000004 /* ProductIcons */, F10000000000000000000004 /* Localizable.strings */, C10000000000000000000005 /* LiteControl.icns in Resources */); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
