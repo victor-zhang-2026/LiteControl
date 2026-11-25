@@ -10,12 +10,12 @@ LiteControl puts your Lite apps in one macOS menu bar panel. Click the sliders i
 
 | Installed apps | Discover more Lite apps |
 | --- | --- |
-| <img src="docs/screenshots/installed.png" width="320" alt="LiteControl in light mode with eight installed apps and their switches"> | <img src="docs/screenshots/discovery.png" width="320" alt="LiteControl in dark mode with the discovery section expanded and a download link for LitePost"> |
+| <img src="docs/screenshots/installed-en.png" width="320" alt="LiteControl in light mode with eight installed apps and their switches"> | <img src="docs/screenshots/discovery-en.png" width="320" alt="LiteControl in dark mode with the discovery section expanded and a download link for LitePost"> |
 
-**Install.** Download the app ZIP from Releases, unzip it, drag `LiteControl.app` into Applications, and open it. The checkbox at the bottom of the panel lets you start LiteControl at login. The panel labels in v2.0.1 are in Chinese.
+**Install.** Download the app ZIP from Releases, unzip it, drag `LiteControl.app` into Applications, and open it. The checkbox at the bottom of the panel lets you start LiteControl at login. LiteControl follows your preferred app language (English or Simplified Chinese). To choose a language just for LiteControl, use **System Settings → General → Language & Region → Applications**, then reopen LiteControl.
 
-- Use a switch to launch an app or request a normal quit. The switch follows the app when you open or quit it elsewhere. **全部开启** and **全部关闭** control all available installed apps.
-- Click an app’s icon or name to open its GitHub repository. Expand **发现更多 Lite 应用** and click **下载** to visit a missing app’s Releases page. LiteControl detects the app after you install it.
+- Use a switch to launch an app or request a normal quit. The switch follows the app when you open or quit it elsewhere. **Start All** and **Quit All** control all available installed apps.
+- Click an app’s icon or name to open its GitHub repository. Expand **Discover More Lite Apps** and click **Download** to visit a missing app’s Releases page. LiteControl detects the app after you install it.
 - The catalog includes LiteTick, LitePark, LiteNum, LiteCount, LiteFocus, LiteCal, LiteStick, and LitePost. LitePost’s switch shows or closes its Hammerspoon note window. Its shortcuts and unsaved-note prompt still work.
 
 **Local apps.** To add a Mac-specific native app, register it in `~/Library/Application Support/LiteControl/local-products.json`. Use a JSON array with `name`, `bundleID`, and an optional GitHub `repository` URL for each entry. LiteControl loads the file at launch and includes installed entries in individual and batch controls.
@@ -32,7 +32,7 @@ LiteControl 把 Lite 系列应用集中到 macOS 菜单栏。点击滑杆图标�
 | --- | --- |
 | <img src="docs/screenshots/installed.png" width="320" alt="浅色面板中的八款已安装应用及运行开关"> | <img src="docs/screenshots/discovery.png" width="320" alt="深色面板展开「发现更多 Lite 应用」，显示 LitePost 下载入口"> |
 
-**安装**　从 Releases 下载应用 ZIP，解压后将 `LiteControl.app` 拖入「应用程序」并打开。勾选面板底部的「开机启动 LiteControl」，即可在登录后自动启动。
+**安装**　从 Releases 下载应用 ZIP，解压后将 `LiteControl.app` 拖入「应用程序」并打开。勾选面板底部的「开机启动 LiteControl」，即可在登录后自动启动。界面跟随 macOS 的应用语言偏好，支持简体中文和英文。也可在「系统设置 → 通用 → 语言与地区 → 应用程序」单独指定 LiteControl 的语言，重新打开后生效。
 
 - 点击开关可启动或正常退出原生应用。在其他地方打开或退出应用，开关也会同步。「全部开启」「全部关闭」可批量控制已安装且可用的应用。
 - 点击应用图标或名称可打开 GitHub 仓库。展开「发现更多 Lite 应用」，点击「下载」即可进入该产品的 Releases 页面。安装完成后，面板会自动识别。

@@ -136,7 +136,7 @@ final class AppController: ObservableObject {
                 NSWorkspace.shared.openApplication(at: url, configuration: config) { [weak self] _, error in
                     Task { @MainActor in
                         self?.busy.remove(product.id)
-                        if let error { self?.message = "启动 \(product.name) 失败：\(error.localizedDescription)" }
+                        if let error { self?.message = String(localized: "Could not start \(product.name): \(error.localizedDescription)") }
                         self?.refresh()
                     }
                 }
@@ -152,7 +152,7 @@ final class AppController: ObservableObject {
                         refreshProcesses()
                     }
                 } else {
-                    message = "\(product.name) 未接受正常退出请求。"
+                    message = String(localized: "\(product.name) declined the quit request.")
                     refreshProcesses()
                 }
             }
@@ -169,7 +169,7 @@ final class AppController: ObservableObject {
     func chooseApplication(_ product: LiteProduct) {
         guard case let .application(id) = product.control else { return }
         let panel = NSOpenPanel()
-        panel.title = "选择 \(product.name).app"
+        panel.title = String(localized: "Choose \(product.name).app")
         panel.allowedContentTypes = [.applicationBundle]
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = false
@@ -178,7 +178,7 @@ final class AppController: ObservableObject {
             Task { @MainActor in
                 guard response == .OK, let url = panel.url, let self else { return }
                 guard ApplicationLocator.matches(url, bundleID: id) else {
-                    self.message = "所选应用与 \(product.name) 的标识不一致。"
+                    self.message = String(localized: "The selected app does not match the bundle identifier for \(product.name).")
                     return
                 }
                 UserDefaults.standard.set(url.path, forKey: "applicationPath.\(id)")
@@ -194,7 +194,7 @@ final class AppController: ObservableObject {
             else { try SMAppService.mainApp.unregister() }
             message = nil
         } catch {
-            message = "设置开机启动失败：\(error.localizedDescription)"
+            message = String(localized: "Could not change the login setting: \(error.localizedDescription)")
         }
         refresh()
     }
@@ -231,8 +231,8 @@ final class AppController: ObservableObject {
             } else {
                 if command != .status {
                     busy.remove(product.id)
-                    if visible == nil { message = "请检查 Hammerspoon 是否已加载 LitePost 和 hs.ipc。" }
-                    else if command == .show && visible == false { message = "LitePost 未打开，请检查其存储目录。" }
+                    if visible == nil { message = String(localized: "Check that Hammerspoon has loaded LitePost and hs.ipc.") }
+                    else if command == .show && visible == false { message = String(localized: "LitePost could not open. Check its storage folder.") }
                     else { message = nil }
                 }
             }

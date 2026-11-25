@@ -53,9 +53,9 @@ private struct ControlPanel: View {
                 Text("LiteControl").font(.headline)
                 Spacer()
                 HStack {
-                    Button("全部开启") { controller.setAll(to: true) }
+                    Button(String(localized: "Start All")) { controller.setAll(to: true) }
                     Text("·").foregroundStyle(.tertiary)
-                    Button("全部关闭") { controller.setAll(to: false) }
+                    Button(String(localized: "Quit All")) { controller.setAll(to: false) }
                 }
                 .buttonStyle(.plain).foregroundStyle(.tint)
                 .disabled(!installed.contains(where: controller.canControl))
@@ -81,12 +81,12 @@ private struct ControlPanel: View {
             Divider()
 
             HStack {
-                Toggle("开机启动 LiteControl", isOn: Binding(
+                Toggle(String(localized: "Open at Login"), isOn: Binding(
                     get: { controller.launchAtLogin }, set: controller.setLaunchAtLogin
                 ))
                 .toggleStyle(.checkbox)
                 Spacer()
-                Button("退出 LiteControl") { NSApplication.shared.terminate(nil) }.buttonStyle(.plain)
+                Button(String(localized: "Quit LiteControl")) { NSApplication.shared.terminate(nil) }.buttonStyle(.plain)
             }
             .font(.system(size: 12)).padding(.horizontal, 16).padding(.top, 12).padding(.bottom, 8)
         }
@@ -112,7 +112,7 @@ private struct ControlPanel: View {
                     HStack(spacing: 7) {
                         Image(systemName: expanded ? "chevron.down" : "chevron.right")
                             .frame(width: 10).font(.caption)
-                        Text("发现更多 Lite 应用")
+                        Text(String(localized: "Discover More Lite Apps"))
                         Spacer()
                         Text("\(missing.count)").monospacedDigit()
                     }
@@ -120,18 +120,18 @@ private struct ControlPanel: View {
                     .frame(height: Self.discoveryHeight).contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityValue(expanded ? "已展开" : "已折叠")
+                .accessibilityValue(expanded ? String(localized: "Expanded") : String(localized: "Collapsed"))
                 if expanded {
                     ForEach(missing) { product in
                         HStack(spacing: 11) {
                             identity(product)
                             if let repository = product.repository {
                                 Link(destination: repository.appendingPathComponent("releases")) {
-                                    Label("下载", systemImage: "arrow.down.circle")
+                                    Label(String(localized: "Download"), systemImage: "arrow.down.circle")
                                 }
                                 .font(.system(size: 12))
-                                .help("在 GitHub Releases 下载 \(product.name)")
-                                .accessibilityLabel("下载 \(product.name)")
+                                .help(String(localized: "Download \(product.name) from GitHub Releases"))
+                                .accessibilityLabel(String(localized: "Download \(product.name)"))
                             }
                         }
                         .frame(height: Self.rowHeight)
@@ -157,8 +157,8 @@ private struct ControlPanel: View {
         if let repository = product.repository {
             Link(destination: repository) { label }
                 .buttonStyle(.plain)
-                .help("打开 \(product.name) 的 GitHub 仓库")
-                .accessibilityLabel("打开 \(product.name) 的 GitHub 仓库")
+                .help(String(localized: "Open the GitHub repository for \(product.name)"))
+                .accessibilityLabel(String(localized: "Open the GitHub repository for \(product.name)"))
         } else {
             label
         }
@@ -166,7 +166,7 @@ private struct ControlPanel: View {
 
     @ViewBuilder private func locateButton(_ product: LiteProduct) -> some View {
         if case .application = product.control {
-            Button("选择 \(product.name).app…") { controller.chooseApplication(product) }
+            Button(String(localized: "Choose \(product.name).app…")) { controller.chooseApplication(product) }
         }
     }
 
@@ -174,15 +174,15 @@ private struct ControlPanel: View {
         HStack(spacing: 11) {
             identity(product)
             if case .postWindow = product.control, controller.postVisible == nil {
-                Text(controller.postHost == nil ? "需启动 Hammerspoon" : "控制未连接")
+                Text(controller.postHost == nil ? String(localized: "Start Hammerspoon") : String(localized: "Disconnected"))
                     .font(.caption).foregroundStyle(.secondary)
-                    .help("请启动 Hammerspoon 并加载 LitePost 和 hs.ipc。")
+                    .help(String(localized: "Start Hammerspoon and load LitePost and hs.ipc."))
             } else if case .application = product.control {
                 Button { controller.chooseApplication(product) } label: {
                     Image(systemName: "folder").font(.system(size: 12)).foregroundStyle(.secondary)
                 }
-                .buttonStyle(.plain).help("选择 \(product.name).app")
-                .accessibilityLabel("选择 \(product.name) 的位置")
+                .buttonStyle(.plain).help(String(localized: "Choose \(product.name).app"))
+                .accessibilityLabel(String(localized: "Locate \(product.name)"))
             }
             Toggle(product.name, isOn: Binding(
                 get: { controller.isRunning(product) },
